@@ -1,0 +1,6 @@
+FROM python:3.9-buster
+LABEL maintainer="Maxim Ryazantsev <maxim.ryazancev@gmail.com>"
+
+RUN apt-get update \
+    && pip3.9 install pathlib 
+EXPOSE 80/tcp

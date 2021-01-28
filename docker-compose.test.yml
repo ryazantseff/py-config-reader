@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tests:
+    image: ryazantseff/config-reader-tests:v1
+    working_dir: /root
+    volumes:
+      - ./tests:/root/tests
+      - ./config_reader:/root/config_reader
+    command: bash -c "python3.9 -m unittest -v tests"
